@@ -62,6 +62,10 @@ The entered text is automatically saved in the browser using LocalStorage so tha
 - Browser LocalStorage
 - Clipboard API
 
+## How to View
+You can view the live project online here:
+https://rojashree03.github.io/Smart-Character-counter/
+
 ## Project Structure
 
 ```text
@@ -71,3 +75,6 @@ Smart-Character-Counter/
 ├── style.css
 ├── script.js
 └── README.md
+
+Author:
+Roja Shree
