@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Character Counter</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Background -->
+
+    <div class="background"></div>
+
+
+    <!-- Header -->
+
+    <header>
+
+        <div class="logo">
+            Smart<span>Counter</span>
+        </div>
+
+        <p>
+            Simple. Fast. Real-time.
+        </p>
+
+    </header>
+
+
+    <!-- Main Section -->
+
+    <main class="container">
+
+
+        <!-- Heading -->
+
+        <div class="header">
+
+            <h1>
+                Smart Character Counter
+            </h1>
+
+            <p>
+                Write your message and track your characters in real time.
+            </p>
+
+        </div>
+
+
+        <!-- Character Limit -->
+
+        <div class="limit-box">
+
+            <label for="characterLimit">
+                Character Limit
+            </label>
+
+            <div class="limit-control">
+
+                <input type="number" id="characterLimit" value="200" min="1">
+
+                <button id="setLimitButton">
+                    Set Limit
+                </button>
+
+            </div>
+
+            <p id="limitMessage">
+                Current limit: 200 characters
+            </p>
+
+        </div>
+
+
+        <!-- Message Card -->
+
+        <div class="card">
+
+
+            <!-- Text Area -->
+
+            <label for="message">
+                Your Message
+            </label>
+
+            <textarea id="message" maxlength="200" placeholder="Type your message here..."></textarea>
+
+
+            <!-- Counter -->
+
+            <div class="counter">
+
+                <span id="characterCount">
+                    0
+                </span>
+
+                /
+
+                <span id="maxCount">
+                    200
+                </span>
+
+                characters
+
+            </div>
+
+
+            <!-- Remaining -->
+
+            <p id="remaining">
+                200 characters remaining
+            </p>
+
+
+            <!-- Word Count -->
+
+            <p id="wordCount">
+                0 words
+            </p>
+
+
+            <!-- Warning -->
+
+            <p id="warning"></p>
+
+
+            <!-- Buttons -->
+
+            <div class="buttons">
+
+                <button id="clearButton">
+                    Clear
+                </button>
+
+                <button id="copyButton">
+                    Copy
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Text Tools -->
+
+        <div class="tools">
+
+            <h2>
+                Text Tools
+            </h2>
+
+            <div class="tool-buttons">
+                <div class="tool-row">
+
+                    <button id="upperButton">UPPERCASE</button>
+                    <button id="lowerButton">lowercase</button>
+                    <button id="titleButton">Title Case</button>
+                    <button id="sentenceButton">Sentence Case</button>
+
+                </div>
+
+
+                <div class="tool-row">
+
+                    <button id="trimButton">Trim Spaces</button>
+                    <button id="blankButton">Remove Blank Lines</button>
+                    <button id="reverseButton">Reverse Text</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Extra Tools -->
+
+            <div class="extra-tools">
+
+                <button id="duplicateButton">
+                    🟠 Highlight Duplicates
+                </button>
+
+                <button id="copyTextButton">
+                    📋 Copy Text
+                </button>
+
+                <button id="copyStatsButton">
+                    📊 Copy Stats
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Information -->
+
+        <div class="info">
+
+            <div>
+
+                <strong id="infoLimit">
+                    200
+                </strong>
+
+                <span>
+                    Maximum Characters
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong id="infoWords">
+                    0
+                </strong>
+
+                <span>
+                    Words
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong id="infoCharacters">
+                    0
+                </strong>
+
+                <span>
+                    Characters
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        Smart Character Counter
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #292524;
+    min-height: 100vh;
+    background: #f5f1e8;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at 10% 10%,
+            #f59e0b30,
+            transparent 30%),
+
+        radial-gradient(circle at 90% 90%,
+            #ea580c25,
+            transparent 30%);
+
+    z-index: -1;
+}
+
+header {
+    position:sticky;
+    top:0;
+    z-index: 9;
+    padding: 22px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffffdd;
+    border-bottom: 1px solid #e7e5e4;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ea580c;
+}
+
+header p {
+    margin: 0;
+    color: #78716c;
+    font-size: 14px;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 55px auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    letter-spacing: -1px;
+}
+
+.header p {
+    color: #78716c;
+    font-size: 16px;
+    margin: 0;
+}
+
+.limit-box {
+    background: #ffffff;
+    border: 1px solid #e7e5e4;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.limit-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.limit-control {
+    display: flex;
+    gap: 10px;
+}
+
+.limit-control input {
+    width: 120px;
+    padding: 11px;
+    border: 1px solid #d6d3d1;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+.limit-control input:focus {
+    border-color: #ea580c;
+}
+
+.limit-control button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #ea580c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.limit-control button:hover {
+    background: #c2410c;
+}
+
+#limitMessage {
+    color: #78716c;
+    font-size: 13px;
+    margin: 10px 0 0;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e7e5e4;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px #29252415;
+}
+
+.card label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    height: 240px;
+    padding: 18px;
+    background: #fffdf9;
+    color: #292524;
+    border: 2px solid #e7e5e4;
+    border-radius: 12px;
+    outline: none;
+    resize: vertical;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+textarea::placeholder {
+    color: #a8a29e;
+}
+
+textarea:focus {
+    border-color: #ea580c;
+    box-shadow: 0 0 0 3px #ea580c20;
+}
+
+.counter {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#characterCount {
+    color: #ea580c;
+}
+
+#remaining,
+#wordCount {
+    text-align: right;
+    color: #78716c;
+    margin: 6px 0;
+}
+
+#warning {
+    text-align: center;
+    color: #dc2626;
+    font-weight: bold;
+    min-height: 22px;
+    margin: 15px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clearButton {
+    background: #f5f5f4;
+    color: #57534e;
+}
+
+#clearButton:hover {
+    background: #e7e5e4;
+}
+
+#copyButton {
+    background: #ea580c;
+    color: white;
+}
+
+#copyButton:hover {
+    background: #c2410c;
+}
+
+.tools {
+    background: #ffffff;
+    border: 1px solid #e7e5e4;
+    border-radius: 18px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px #2925240d;
+}
+
+.tools h2 {
+    margin: 0 0 18px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.tool-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tool-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.tool-row button {
+    flex: 1;
+    padding: 11px 15px;
+    border: 1px solid #d6d3d1;
+    border-radius: 9px;
+    background: #fafaf9;
+    color: #44403c;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tool-row button:hover {
+    background: #fff7ed;
+    border-color: #ea580c;
+    color: #c2410c;
+}
+
+.extra-tools {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.extra-tools button {
+    flex: 1;
+    padding: 11px 15px;
+    border: 1px solid #d6d3d1;
+    border-radius: 9px;
+    background: #fafaf9;
+    color: #44403c;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.extra-tools button:hover {
+    background: #fff7ed;
+    border-color: #ea580c;
+    color: #c2410c;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.info div {
+    background: white;
+    border: 1px solid #e7e5e4;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.info strong {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ea580c;
+}
+
+.info span {
+    display: block;
+    margin-top: 5px;
+    color: #78716c;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #a8a29e;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+    .container {
+        width: 94%;
+        margin: 35px auto;
+    }
+
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+
+    .card,
+    .tools {
+        padding: 20px;
+    }
+
+
+    textarea {
+        height: 200px;
+    }
+
+
+    .buttons {
+        flex-direction: column;
+    }
+
+
+    .limit-control {
+        flex-direction: column;
+    }
+
+
+    .limit-control input,
+    .limit-control button {
+        width: 100%;
+    }
+
+
+    .tool-row {
+        flex-direction: column;
+    }
+
+
+    .extra-tools {
+        flex-direction: column;
+    }
+
+
+    .tool-row button,
+    .extra-tools button {
+        width: 100%;
+    }
+
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+}
